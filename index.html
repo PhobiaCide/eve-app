@@ -1,97 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>!PROTOTYPE!</title>
-        <link rel="stylesheet" href="./style.css" />
-    </head>
-    <body>
-        <!--		SVG Definitions			-->
-        <svg width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <!------------------------------
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>!PROTOTYPE!</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta property="og:title" content="">	
+	<meta property="og:type" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- Place favicon.ico in the root directory -->
+	
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="./css/style.css">
+	
+	<meta name="theme-color" content="#fafafa">
+
+</head>
+<body>
+	<!-----------------------------
+			SVG Definitions
+	------------------------------>
+	<svg width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+		
+			<!------------------------------
 					Basic Symbols		
 			------------------------------->
-                <symbol id="down" viewBox="0 0 16 16">
-                    <polygon points="3.81 4.38 8 8.57 12.19 4.38 13.71 5.91 8 11.62 2.29 5.91 3.81 4.38" />
-                </symbol>
-                <symbol id="collapse" viewBox="0 0 16 16">
-                    <polygon points="11.62 3.81 7.43 8 11.62 12.19 10.09 13.71 4.38 8 10.09 2.29 11.62 3.81" />
-                </symbol>
-                <symbol id="search" viewBox="0 0 16 16">
-                    <path d="M6.57,1A5.57,5.57,0,1,1,1,6.57,5.57,5.57,0,0,1,6.57,1m0-1a6.57,6.57,0,1,0,6.57,6.57A6.57,6.57,0,0,0,6.57,0Z" />
-                    <rect x="11.84" y="9.87" width="2" height="5.93" transform="translate(-5.32 12.84) rotate(-45)" />
-                </symbol>
+			<symbol id="down" viewBox="0 0 16 16">
+				<polygon points="3.81 4.38 8 8.57 12.19 4.38 13.71 5.91 8 11.62 2.29 5.91 3.81 4.38" />
+            </symbol>
+            <symbol id="collapse" viewBox="0 0 16 16">
+				<polygon points="11.62 3.81 7.43 8 11.62 12.19 10.09 13.71 4.38 8 10.09 2.29 11.62 3.81" />
+            </symbol>
+            <symbol id="search" viewBox="0 0 16 16">
+				<path d="M6.57,1A5.57,5.57,0,1,1,1,6.57,5.57,5.57,0,0,1,6.57,1m0-1a6.57,6.57,0,1,0,6.57,6.57A6.57,6.57,0,0,0,6.57,0Z" />
+				<rect x="11.84" y="9.87" width="2" height="5.93" transform="translate(-5.32 12.84) rotate(-45)" />
+            </symbol>
 
-                <!------------------------------
+			<!------------------------------
 					Gradient Presets
 			-------------------------------->
-                <linearGradient id="black-pepper" gradientTransform="rotate(45)">
-                    <stop offset="0%" stop-color=" #bdcad9" />
-                    <stop offset="74%" stop-color="#e1dada" />
-                </linearGradient>
-                <linearGradient id="sex-tape" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #2f4353" />
-                    <stop offset="74%" stop-color="#d2ccc4" />
-                </linearGradient>
-                <linearGradient id="moon-spot" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #d7d7d7" />
-                    <stop offset="74%" stop-color="#353535" />
-                </linearGradient>
-                <linearGradient id="pre-dark" gradientTransform="rotate(45)">
-                    <stop offset="0%" stop-color=" #000000" />
-                    <stop offset="74%" stop-color="#434343" />
-                </linearGradient>
-                <linearGradient id="minty" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #44b09e" />
-                    <stop offset="74%" stop-color="#e0d2c7" />
-                </linearGradient>
-                <linearGradient id="charcoal-lavender" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #dbcbd8" />
-                    <stop offset="74%" stop-color="#2e4057" />
-                </linearGradient>
-                <linearGradient id="cheap-champagne" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #f5d3c8" />
-                    <stop offset="74%" stop-color="#c08552" />
-                </linearGradient>
-                <linearGradient id="pyramid-brick" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #ba9a8e" />
-                    <stop offset="74%" stop-color="#96705b" />
-                </linearGradient>
-                <linearGradient id="voice-call" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #2d3436" />
-                    <stop offset="74%" stop-color="#d3d3d3" />
-                </linearGradient>
-                <linearGradient id="usual-suspects" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #000000" />
-                    <stop offset="74%" stop-color="#7f8c8d" />
-                </linearGradient>
-                <linearGradient id="mesnevis-lecture" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #e4eee9" />
-                    <stop offset="74%" stop-color="#93a5ce" />
-                </linearGradient>
-                <linearGradient id="proactive-shower" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #b1bfd8" />
-                    <stop offset="74%" stop-color="#6782b4" />
-                </linearGradient>
-                <linearGradient id="jay-zs-hyphen" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color=" #e9bcb7" />
-                    <stop offset="74%" stop-color="#29524a" />
-                </linearGradient>
-                <linearGradient id="notification-from-ex" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color="#9e8fb2" />
-                    <stop offset="74%" stop-color="#a7acd9" />
-                </linearGradient>
-                <linearGradient id="entrepreneurial-lies" gradientTransform="rotate(315)">
-                    <stop offset="0%" stop-color="#bdd4e7" />
-                    <stop offset="74%" stop-color="#8693ab" />
-                </linearGradient>
-
-                <!------------------------------
+            <linearGradient id="black-pepper" gradientTransform="rotate(45)">
+                <stop offset="0%" stop-color=" #bdcad9" />
+                <stop offset="74%" stop-color="#e1dada" />
+            </linearGradient>
+            <linearGradient id="sex-tape" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color=" #2f4353" />
+                <stop offset="74%" stop-color="#d2ccc4" />
+            </linearGradient>
+            <linearGradient id="moon-spot" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color=" #d7d7d7" />
+                <stop offset="74%" stop-color="#353535" />
+            </linearGradient>
+            <linearGradient id="pre-dark" gradientTransform="rotate(45)">
+                <stop offset="0%" stop-color=" #000000" />
+                <stop offset="74%" stop-color="#434343" />
+            </linearGradient>
+            <linearGradient id="minty" gradientTransform="rotate(315)">
+            <stop offset="0%" stop-color=" #44b09e" />
+                <stop offset="74%" stop-color="#e0d2c7" />
+            </linearGradient>
+            <linearGradient id="charcoal-lavender" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color=" #dbcbd8" />
+                <stop offset="74%" stop-color="#2e4057" />
+            </linearGradient>
+            <linearGradient id="cheap-champagne" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color=" #f5d3c8" />
+                <stop offset="74%" stop-color="#c08552" />
+            </linearGradient>
+            <linearGradient id="pyramid-brick" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color=" #ba9a8e" />
+                <stop offset="74%" stop-color="#96705b" />
+            </linearGradient>
+            <linearGradient id="voice-call" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color=" #2d3436" />
+                <stop offset="74%" stop-color="#d3d3d3" />
+            </linearGradient>
+            <linearGradient id="usual-suspects" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color=" #000000" />
+                <stop offset="74%" stop-color="#7f8c8d" />
+            </linearGradient>
+            <linearGradient id="mesnevis-lecture" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color=" #e4eee9" />
+                <stop offset="74%" stop-color="#93a5ce" />
+            </linearGradient>
+            <linearGradient id="proactive-shower" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color=" #b1bfd8" />
+                <stop offset="74%" stop-color="#6782b4" />
+            </linearGradient>
+            <linearGradient id="jay-zs-hyphen" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color=" #e9bcb7" />
+                <stop offset="74%" stop-color="#29524a" />
+            </linearGradient>
+            <linearGradient id="notification-from-ex" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color="#9e8fb2" />
+                <stop offset="74%" stop-color="#a7acd9" />
+            </linearGradient>
+            <linearGradient id="entrepreneurial-lies" gradientTransform="rotate(315)">
+                <stop offset="0%" stop-color="#bdd4e7" />
+                <stop offset="74%" stop-color="#8693ab" />
+            </linearGradient>
+	
+			<!------------------------------
 					SVG Icon definitions
 			------------------------------->
-                <symbol id="achievements">
-                    <g>
+            <symbol id="achievements">
+				<g>
                         <clipPath id="achievements-A">
                             <path d="M0 0h128v128H0z" />
                         </clipPath>
@@ -2098,33 +2118,31 @@
                     </g>
                 </symbol>
                 <symbol id="grouplist">
-                    <clipPath id="grouplist-A">
-                        <path d="M0 0h128v128H0z" />
+                <clipPath id="grouplist-A">
+                    <path d="M0 0h128v128H0z" />
+                </clipPath>
+                <g opacity=".75" clip-path="url(#grouplist-A)">
+                    <clipPath id="grouplist-B">
+                        <path d="M18.782 78.868h90.436V30.014H18.782z" />
                     </clipPath>
-                    <g opacity=".75" clip-path="url(#grouplist-A)">
-                        <clipPath id="grouplist-B">
-                            <path d="M18.782 78.868h90.436V30.014H18.782z" />
+                    <g clip-path="url(#grouplist-B)">
+                        <clipPath id="grouplist-C">
+                            <path
+                                d="M109.218 78.868v-7.07s-10.217-4.152-14.346-6.121c-3.375-1.609-2.515-7.399-2.515-7.399s1.07-.994 1.337-2.706l.567-3.666a.79.79 0 0 0 .129.009c.265 0 .874-.101 1.209-.97.432-1.129.534-1.541.801-2.808.264-1.252.716-4.148-.357-4.148l-.045.002c-.058.004-.217.097-.356.097s-.251-.087-.241-.424c0 0 1.617-13.65-10.52-13.65s-10.52 13.65-10.52 13.65c.009.337-.107.424-.242.424s-.297-.093-.356-.097c-.015-.002-.03-.002-.045-.002-.79 0-.752 1.57-.572 2.898.804.578 1.542 1.242 2.2 1.981 3.243 3.65 4.006 8.39 4.119 11.459 1.354 1.803 1.609 4.272.832 7.958-.302 1.436-.469 2.115-1.029 3.577-.319.836-.801 1.601-1.419 2.248l-.211 1.351a9.98 9.98 0 0 1-1.193 3.407h8.436zm-57.893 0H18.782v-7.07s10.217-4.152 14.347-6.121c3.374-1.609 2.515-7.399 2.515-7.399s-1.07-.994-1.337-2.706l-.568-3.666s-.049.009-.129.009c-.265 0-.874-.101-1.208-.97-.433-1.129-.535-1.541-.801-2.808-.264-1.252-.717-4.148.356-4.148.015 0 .03 0 .045.002.059.004.217.097.356.097s.251-.087.242-.424c0 0-1.618-13.65 10.52-13.65s10.52 13.65 10.52 13.65c-.01.337.106.424.241.424s.298-.093.356-.097c.016-.002.03-.002.045-.002.756 0 .754 1.435.595 2.722a13.52 13.52 0 0 0-2.453 2.157c-3.242 3.65-4.006 8.389-4.119 11.459-1.353 1.802-1.609 4.271-.832 7.959.303 1.436.469 2.115 1.025 3.565a6.77 6.77 0 0 0 1.423 2.257l.211 1.355a9.97 9.97 0 0 0 1.193 3.405" />
                         </clipPath>
-                        <g clip-path="url(#grouplist-B)">
-                            <clipPath id="grouplist-C">
-                                <path
-                                    d="M109.218 78.868v-7.07s-10.217-4.152-14.346-6.121c-3.375-1.609-2.515-7.399-2.515-7.399s1.07-.994 1.337-2.706l.567-3.666a.79.79 0 0 0 .129.009c.265 0 .874-.101 1.209-.97.432-1.129.534-1.541.801-2.808.264-1.252.716-4.148-.357-4.148l-.045.002c-.058.004-.217.097-.356.097s-.251-.087-.241-.424c0 0 1.617-13.65-10.52-13.65s-10.52 13.65-10.52 13.65c.009.337-.107.424-.242.424s-.297-.093-.356-.097c-.015-.002-.03-.002-.045-.002-.79 0-.752 1.57-.572 2.898.804.578 1.542 1.242 2.2 1.981 3.243 3.65 4.006 8.39 4.119 11.459 1.354 1.803 1.609 4.272.832 7.958-.302 1.436-.469 2.115-1.029 3.577-.319.836-.801 1.601-1.419 2.248l-.211 1.351a9.98 9.98 0 0 1-1.193 3.407h8.436zm-57.893 0H18.782v-7.07s10.217-4.152 14.347-6.121c3.374-1.609 2.515-7.399 2.515-7.399s-1.07-.994-1.337-2.706l-.568-3.666s-.049.009-.129.009c-.265 0-.874-.101-1.208-.97-.433-1.129-.535-1.541-.801-2.808-.264-1.252-.717-4.148.356-4.148.015 0 .03 0 .045.002.059.004.217.097.356.097s.251-.087.242-.424c0 0-1.618-13.65 10.52-13.65s10.52 13.65 10.52 13.65c-.01.337.106.424.241.424s.298-.093.356-.097c.016-.002.03-.002.045-.002.756 0 .754 1.435.595 2.722a13.52 13.52 0 0 0-2.453 2.157c-3.242 3.65-4.006 8.389-4.119 11.459-1.353 1.802-1.609 4.271-.832 7.959.303 1.436.469 2.115 1.025 3.565a6.77 6.77 0 0 0 1.423 2.257l.211 1.355a9.97 9.97 0 0 0 1.193 3.405"
-                                />
-                            </clipPath>
-                            <g clip-path="url(#grouplist-C)">
-                                <rect x="18" y="30" width="92" height="49" class="shape" />
-                            </g>
+                        <g clip-path="url(#grouplist-C)">
+                            <rect x="18" y="30" width="92" height="49" class="shape" />
                         </g>
                     </g>
-                    <clipPath id="grouplist-D">
-                        <path
-                            d="M53.365 62.782c.009.337-.107.424-.242.424s-.297-.092-.356-.097c-.014-.002-.03-.002-.044-.002-1.074 0-.621 2.896-.357 4.148.267 1.268.369 1.679.801 2.808.334.869.944.971 1.208.971.08 0 .13-.01.13-.01l.567 3.666c.267 1.713 1.337 2.707 1.337 2.707s.86 5.789-2.515 7.399c-4.129 1.969-14.346 6.12-14.346 6.12v7.071h48.675v-7.071s-10.218-4.151-14.347-6.12c-3.375-1.61-2.515-7.399-2.515-7.399s1.07-.994 1.337-2.707l.567-3.666s.049.01.13.01c.265 0 .873-.102 1.208-.971.433-1.129.534-1.54.801-2.808.264-1.252.716-4.148-.357-4.148-.014 0-.029 0-.045.002-.058.005-.216.097-.355.097s-.252-.087-.242-.424c0 0 1.618-13.65-10.52-13.65s-10.52 13.65-10.52 13.65"
-                        />
-                    </clipPath>
-                    <g clip-path="url(#grouplist-D)">
-                        <rect x="39" y="49" width="50" height="49" class="shape" />
-                    </g>
-                </symbol>
+                </g>
+                <clipPath id="grouplist-D">
+                    <path
+                        d="M53.365 62.782c.009.337-.107.424-.242.424s-.297-.092-.356-.097c-.014-.002-.03-.002-.044-.002-1.074 0-.621 2.896-.357 4.148.267 1.268.369 1.679.801 2.808.334.869.944.971 1.208.971.08 0 .13-.01.13-.01l.567 3.666c.267 1.713 1.337 2.707 1.337 2.707s.86 5.789-2.515 7.399c-4.129 1.969-14.346 6.12-14.346 6.12v7.071h48.675v-7.071s-10.218-4.151-14.347-6.12c-3.375-1.61-2.515-7.399-2.515-7.399s1.07-.994 1.337-2.707l.567-3.666s.049.01.13.01c.265 0 .873-.102 1.208-.971.433-1.129.534-1.54.801-2.808.264-1.252.716-4.148-.357-4.148-.014 0-.029 0-.045.002-.058.005-.216.097-.355.097s-.252-.087-.242-.424c0 0 1.618-13.65-10.52-13.65s-10.52 13.65-10.52 13.65" />
+                </clipPath>
+                <g clip-path="url(#grouplist-D)">
+                    <rect x="39" y="49" width="50" height="49" class="shape" />
+                </g>
+            </symbol>
                 <symbol id="help">
                     <clipPath id="help-A">
                         <path
@@ -4438,154 +4456,154 @@
                 </symbol>
             </defs>
         </svg>
-        <header class="page-header">
-            <nav>
-                <a href="#0" class="logo">
-                    <svg width="140" height="1">
-                        <use xlink:href="#logo"></use>
-                    </svg>
-                </a>
-                <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
-                    <svg width="20" height="20" aria-hidden="true">
-                        <use xlink:href="#down"></use>
-                    </svg>
-                </button>
-                <ul class="admin-menu">
-                    <li class="menu-heading">
-                        <h3>Navigation</h3>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg class="icon" viewBox="0 0 128 128">
-                                <use xlink:href="#attributes"></use>
-                            </svg>
-                            <span>Character Stats</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg class="icon" viewBox="0 0 128 128">
-                                <use xlink:href="#log"></use>
-                            </svg>
-                            <span>Logs</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg class="icon" viewBox="0 0 128 128">
-                                <use xlink:href="#marketdeliveries"></use>
-                            </svg>
-                            <span>Finances</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg class="icon" viewBox="0 0 128 128">
-                                <use xlink:href="#grouplist"></use>
-                            </svg>
-                            <span>Social</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg class="icon" viewBox="0 0 128 128">
-                                <use xlink:href="#industry"></use>
-                            </svg>
-                            <span>Industry</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg class="icon" viewBox="0 0 128 128">
-                                <use xlink:href="#charcustomization"></use>
-                            </svg>
-                            <span>Appearance</span>
-                        </a>
-                    </li>
-                    <li class="menu-heading">
-                        <h3>Settings</h3>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg class="icon" viewBox="0 0 128 128">
-                                <use xlink:href="#settings"></use>
-                            </svg>
-                            <span>Settings</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg class="icon" viewBox="0 0 128 128">
-                                <use xlink:href="#repairshop"></use>
-                            </svg>
-                            <span>Options</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg class="icon" viewBox="0 0 128 128">
-                                <use xlink:href="#help"></use>
-                            </svg>
-                            <span>Help</span>
-                        </a>
-                    </li>
-                    <li>
-                        <div class="switch">
-                            <input type="checkbox" id="mode" checked />
-                            <label for="mode">
-                                <span></span>
-                                <span>Dark</span>
-                            </label>
-                        </div>
-                        <button class="collapse-btn" aria-expanded="true" aria-label="collapse menu">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#collapse"></use>
-                            </svg>
-                            <span>Collapse</span>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <section class="page-content">
-            <section class="search-and-user">
-                <form>
-                    <input type="search" placeholder="Search Pages..." />
-                    <button type="submit" aria-label="submit form">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#search"></use>
-                        </svg>
-                    </button>
-                </form>
-                <div class="admin-profile">
-                    <span class="greeting">Hello admin</span>
-                    <div class="notifications">
-                        <span class="badge">1</span>
-                        <svg class="icon" viewBox="0 0 128 128">
-                            >
-                            <use xlink:href="#tutorial"></use>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-            <section class="grid">
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-            </section>
-            <footer class="page-footer">
-                <span>Made by </span>
-                <a href="https://github.com/PhobiaCide/" target="_blank">
-                    <img width="24" height="24" src="https://assets.codepen.io/162656/george-martsoukos-small-logo.svg" alt="PhobiaCide" />
-                </a>
-            </footer>
-        </section>
-        <!-- partial -->
-        <script src="./script.js"></script>
-    </body>
+<header class="page-header">
+  <nav>
+		    <a href="#0"  class="logo">
+      <svg width="140" height="1">
+        <use xlink:href="#logo"></use>
+      </svg>
+    </a>
+		<button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
+      <svg width="20" height="20" aria-hidden="true">
+        <use xlink:href="#down"></use>
+      </svg>
+    </button>
+    <ul class="admin-menu">
+		<li class="menu-heading">
+			<h3>Navigation</h3>
+		</li>
+      <li>
+        <a href="#0">
+          <svg class="icon" viewBox="0 0 128 128">
+            <use xlink:href="#attributes"></use>
+          </svg>
+          <span>Characters</span>
+        </a>
+      </li>
+      <li>
+        <a href="#0">
+          <svg class="icon" viewBox="0 0 128 128">
+            <use xlink:href="#log"></use>
+          </svg>
+          <span>Logs</span>
+        </a>
+      </li>
+      <li>
+        <a href="#0">
+          <svg class="icon" viewBox="0 0 128 128">
+            <use xlink:href="#marketdeliveries"></use>
+          </svg>
+          <span>Finances</span>
+        </a>
+      </li>
+      <li>
+        <a href="#0">
+          <svg class="icon" viewBox="0 0 128 128">
+            <use xlink:href="#grouplist"></use>
+          </svg>
+          <span>Social</span>
+        </a>
+      </li>
+      <li>
+        <a href="#0">
+          <svg class="icon" viewBox="0 0 128 128">
+            <use xlink:href="#industry"></use>
+          </svg>
+          <span>Industry</span>
+        </a>
+      </li>
+      <li>
+        <a href="#0">
+          <svg class="icon" viewBox="0 0 128 128">
+            <use xlink:href="#charcustomization"></use>
+          </svg>
+          <span>Appearance</span>
+        </a>
+      </li>
+      <li class="menu-heading">
+        <h3>Settings</h3>
+      </li>
+      <li>
+        <a href="#0">
+          <svg class="icon" viewBox="0 0 128 128">
+            <use xlink:href="#settings"></use>
+          </svg>
+          <span>Settings</span>
+        </a>
+      </li>
+      <li>
+        <a href="#0">
+          <svg class="icon" viewBox="0 0 128 128">
+            <use xlink:href="#repairshop"></use>
+          </svg>
+          <span>Options</span>
+        </a>
+      </li>
+      <li>
+        <a href="#0">
+          <svg class="icon" viewBox="0 0 128 128">
+            <use xlink:href="#help"></use>
+          </svg>
+          <span>Help</span>
+        </a>
+      </li>
+      <li>
+        <div class="switch">
+          <input type="checkbox" id="mode" checked>
+          <label for="mode">
+            <span></span>
+            <span>Dark</span>
+          </label>
+        </div>
+        <button class="collapse-btn" aria-expanded="true" aria-label="collapse menu">
+          <svg aria-hidden="true">
+            <use xlink:href="#collapse"></use>
+          </svg>
+          <span>Collapse</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+<section class="page-content">
+  <section class="search-and-user">
+    <form>
+      <input type="search" placeholder="Search Pages...">
+      <button type="submit" aria-label="submit form">
+        <svg aria-hidden="true">
+          <use xlink:href="#search"></use>
+        </svg>
+      </button>
+    </form>
+    <div class="admin-profile">
+      <span class="greeting">Hello admin</span>
+      <div class="notifications">
+        <span class="badge">1</span>
+        <svg class="icon" viewBox="0 0 128 128">>
+          <use xlink:href="#tutorial"></use>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <section class="grid">
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+  </section>
+  <footer class="page-footer">
+    <span>made by </span>
+    <a href="https://georgemartsoukos.com/" target="_blank">
+      <img width="24" height="24" src="https://assets.codepen.io/162656/george-martsoukos-small-logo.svg" alt="PhobiaCide">
+    </a>
+  </footer>
+</section>
+<!-- partial -->
+  <script  src="./js/script.js"></script>
+
+</body>
 </html>
