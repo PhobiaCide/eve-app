@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Corben&family=Montserrat:wght@200&display=swap');
 
 /************************************************
-*												*
-*				 	Defaults					*
-* 												*
+*						*
+*		Defaults			*
+* 						*
 *************************************************/
 :root {
   --page-header-bgColor: #242e42;
@@ -93,9 +93,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************************
-*												*
-*				 Header Styles					*
-* 												*
+*						*
+*		Header Styles			*
+* 						*
 *************************************************/
 .page-header {
   position: fixed;
@@ -227,9 +227,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /************************************************
-*												*
-*				 Content Styles					*
-* 												*
+*						*
+*		Content Styles			*
+* 						*
 *************************************************/
 .page-content {
   position: relative;
@@ -343,9 +343,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************************
-*												*
-*				 Media Queries					*
-* 												*
+*						*
+*		Media Queries			*
+* 						*
 *************************************************/
 @media screen and (max-width: 767px) {
   .page-header,
@@ -441,9 +441,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************************
-*												*
-*				 Body Classes					*
-* 												*
+*						*
+*		Body Classes			*
+* 						*
 *************************************************/
 .mob-menu-opened .toggle-mob-menu svg {
   transform: rotate(180deg);
@@ -485,9 +485,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************************
-*												*
-*				 Switch Styles					*
-* 												*
+*						*
+*		Switch Styles			*
+* 						*
 *************************************************/
 .switch label {
   display: grid;
@@ -556,9 +556,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************************
-*												*
-*			 Light Mode Styles					*
-* 												*
+*						*
+*		Light Mode Styles		*
+* 						*
 *************************************************/
 .light-mode {
   --page-header-bgColor: #f1efec;
@@ -595,9 +595,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************************
-*												*
-*				 	Footer						*
-* 												*
+*						*
+*		Footer				*
+* 						*
 *************************************************/
 .page-footer {
   font-size: 1rem;
